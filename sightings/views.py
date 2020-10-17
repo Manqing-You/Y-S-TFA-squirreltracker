@@ -29,8 +29,8 @@ def update(request,Unique_Squirrel_ID):
             myinfo=sightings.objects.all()
             context={'myinfo':myinfo,}
             return render(request,'sightings/list_all.html',context)
-        else:
-            form = sightingsform(instance=sighting)
-        context = {'form':form}
-        return render(request, 'sightings/update.html',context)
+    else:
+        form = sightingsform(instance=sighting)
+    context = {'form':form}
+    return render(request, 'sightings/update.html',context)
 

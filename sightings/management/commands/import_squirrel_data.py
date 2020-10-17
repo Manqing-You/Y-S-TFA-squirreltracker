@@ -10,7 +10,7 @@ class Command(BaseCommand):
   help = 'Update the database of the day every morning'
   
   def add_arguments(self, parser):
-      parser.add_argument('path', type=str, help='文件路径')
+      parser.add_argument('path', type=str, help='file path')
 
   def handle(self, *args, **options):
       path = options['path']  
@@ -27,8 +27,8 @@ class Command(BaseCommand):
               date = datetime.datetime.strptime(detester,'%m%d%Y')
               #print(date)
               squirrel = sightings()
-              squirrel.Latitude = i["x"]
-              squirrel.Longitude = i["y"]
+              squirrel.Latitude = i["Y"]
+              squirrel.Longitude = i["X"]
               squirrel.Unique_Squirrel_ID = i["Unique Squirrel ID"]
               squirrel.Shift = i['Shift']
               squirrel.Date = date
@@ -37,8 +37,6 @@ class Command(BaseCommand):
               squirrel.Location = i['Location']
               squirrel.Specific_Location = i['Specific Location']
               squirrel.Running = testboolean(i['Running'])
-              #print(i['Running'])
-              #print(squirrel.Running)
               squirrel.Chasing = testboolean(i['Chasing'])
               squirrel.Climbing = testboolean(i['Climbing'])
               squirrel.Eating = testboolean(i['Eating'])

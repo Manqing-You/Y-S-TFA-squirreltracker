@@ -17,15 +17,14 @@ class Command(BaseCommand):
       print(path)
       with open(path) as fp:
           data = list(csv.DictReader(fp))
-  def testboolean(str_):
+          def testboolean(str_):
               if str_ == 'true':
                   return 1
               else:
                   return 0
-		              for i in data:
+          for i in data:
               detester = i['Date']
               date = datetime.datetime.strptime(detester,'%m%d%Y')
-              #print(date)
               squirrel = sightings()
               squirrel.Latitude = i["Y"]
               squirrel.Longitude = i["X"]

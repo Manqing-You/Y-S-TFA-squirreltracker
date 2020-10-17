@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from .models import sightings
-#from django.http import HttpResponse
+from django.http import HttpResponse
 from .forms import sightingsform
 from django.shortcuts import redirect
 
@@ -21,7 +21,7 @@ def list_all(request):
 	
 
 def update(request,Unique_Squirrel_ID):
-    sighting=sightings.objects.get(Unique_Squirrel_ID=Unique_Squirrel_ID)
+    sighting=get_object_or_404(sightings,Unique_Squirrel_ID=Unique_Squirrel_ID)
     if request.method == "POST":
         form = sightingsform(request.POST,instance=sighting)
         if form.is_valid():
@@ -34,3 +34,16 @@ def update(request,Unique_Squirrel_ID):
     context = {'form':form}
     return render(request, 'sightings/update.html',context)
 
+
+
+def create_squirrel(request):
+    if request.method == 'POST':
+        form = sightingsform(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request,'sightings/list_all.html',context)
+    else:
+        form = sightingsform()
+
+    context = {'form':form,}
+    return render(request, 'sightings/add.html', context)

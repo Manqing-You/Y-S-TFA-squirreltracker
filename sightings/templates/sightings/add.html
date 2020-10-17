@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+        <head>
+                <title>Add a Squirrel Sighting Below</title>
+		<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        </head>
+        <body>
+		<style>body{padding-left:20px; padding-right:20px;}</style>
+		<p>
+		<br>
+		<p>Please fill out the information below:)</p>
+		<hr>
+		<br>
+                <form method='POST'>
+                        {% csrf_token %}
+                        {{form.as_p}}
+                        <br>
+			<p>Thanks for sharing!</p>
+                        <input type="submit" name="add">
+                </form>
+		<br>
+        </body>
+</html>

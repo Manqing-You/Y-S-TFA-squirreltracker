@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang='en'>
+
+        <head>
+                <title>List of Squirrel Sightings</title>
+		<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        </head>
+        <body>
+		
+<style>
+      body {
+        padding-left: 10px; padding-right: 10px;
+      }
+</style>
+		
+		
+		<br>
+		<div>
+                <table class="table">
+		<div class="alert alert-dark text-center" role="alert">
+			<h5><strong> Existing Squirrel Track Records </strong></h5>
+		</div>
+		<thead class = "thead-dark">
+                                <tr>
+                                        <th scope = "col">Unique Squirrel ID</th>
+                                        <th scope = "col">Date</th>
+                                        <th scope = "col">Shift</th>
+					<th scope = "col">See the details</th>
+					<th scope = "col">>Update the info</th>
+                                </tr>
+                </thead>
+
+                <tbody>
+                {% for sight in mylist_ %}
+                                <tr>
+                                        <td>{{ sight.Unique_Squirrel_ID }}</td>
+                                        <td>{{ sight.Date }}</td>
+                                        <td>{{ sight.Shift }}</td>
+					<td><a href="{{sight.Unique_Squirrel_ID}}/details">Click to see details</a>
+					<td><a href="{{sight.Unique_Squirrel_ID}}/">Click to update the info</a>
+                                </tr>
+                {% endfor %}
+                </tbody>
+                </table>
+		</div>
+		<br>
+		<br>
+        </body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Statistics of Squirrel Sightings</title> 
+                <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+<body>
+<style>
+      body {
+        padding-left: 20px; padding-right: 20px;
+		h3 {color:blue;}
+      }
+</style>
+<br>
+		<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1602957279283&di=75f5ad6aa7686e5b514af7eb70d25218&imgtype=0&src=http%3A%2F%2Ffile02.16sucai.com%2Fd%2Ffile%2F2014%2F0419%2Fd9f4710e211cd8bce6b8ef361b805fd3.jpg" style="width:80px" class="rounded" alt="big boat" ></p>
+		<strong><h2>Statistics of Squirrel Sightings</h2></strong>
+		<br>
+			 <div>
+                        <table class='table table-bordered' id="all_num" style="width: 1000px">
+				<div class="alert alert-success text-center" style="width: 1000px">
+					<h4><strong> Counts of Squirrel Sightings Records </strong></h4>
+                </div>
+                                <thead class="thead-light">
+                                         <tr>
+                                                 <th scope='col'></th>
+                                                 <th scope='col'>Total Records</th>
+                                                 <th scope='col'>Total Records(with duplicate ID removed)</th>
+						 <th scope='col'>Average Latitude/Longitude</th>
+                                         </tr>
+                                 </thead>
+                                 <tbody>
+                                         <tr>
+                                                 <th>Total quantity</th>
+                                                 <td>3023</td>
+                                                 <td>3018</td>
+						 <td>({{context.Lat_aver}},{{context.Long_aver}})</td>
+                                         </tr>
+                                 </tbody>
+                         </table>
+                </div>
+		<br>
+		<br>
+                <div>
+                        <table class='table table-bordered' id="basic_table" style="width: 1000px">
+				<div class="alert alert-success text-center" style="width: 1000px">
+					<h4><strong> Counts of Basic Features of Squirrel Sightings</strong></h4>
+                </div>
+                                <thead class="thead-light">
+                                 </thead>
+                                 <tbody>
+                                         <tr>
+                                                 <th colspan="2">Shift</th>
+                                                 <th colspan="2">Age</th>
+                                                 <th colspan="3">Primary Fur Color</th>
+						 <th colspan="2">Location</th>
+                                         </tr>
+                                         <tr>
+                                                 <td >AM</td>
+						 <td>PM</td>
+						 <td>Juvenile</td>
+						 <td>Adult</td>
+						 <td>Black</td>
+						 <td>Gray</td>
+						 <td>Cinnamon</td>
+						 <td>Above Ground</td>
+						 <td>Ground Plane</td>
+                                                 
+                                         </tr>
+					 <tr>
+                                                 <td>{{context.Shift.AM}}</td>
+						 <td>{{context.Shift.PM}}</td>
+						 <td>{{context.Age.Juvenile}}</td>
+						 <td>{{context.Age.Adult}}</td>
+						 <td>{{context.Primary_Fur_Color.Black}}</td>
+						 <td>{{context.Primary_Fur_Color.Gray}}</td>
+						 <td>{{context.Primary_Fur_Color.Cinnamon}}</td>
+						 <td>{{context.Location.Above_Ground}}</td>
+						 <td>{{context.Location.Ground_Plane}}</td>
+                                                 
+                                         </tr>
+                                 </tbody>
+                         </table>
+                </div>
+		<br>
+		<br>
+                <div>
+                         <table class="table table-bordered" id="behaviors" style="width: 1000px">
+				 <div class="alert alert-success text-center" style="width: 1000px">
+                                        <h4><strong> Counts of Behaviors of Squirrel Sightings </strong></h4>
+                 </div>
+                 <thead class="thead-light">
+					 <tr>
+						 <th scope='col'></th>
+						 <th scope='col'>True</th>
+						 <th scope='col'>False</th>
+					 </tr>
+				 </thead>
+				 <tbody>
+					 <tr>
+						 <th>Running</th>
+						 <td>{{context.Running.True}}</td>
+						 <td>{{context.Running.False}}</td>
+					 </tr>
+					 <tr>
+						 <th>Chasing</th>
+						 <td>{{context.Chasing.True}}</td>
+						 <td>{{context.Chasing.False}}</td>
+					 </tr>
+					 <tr>
+						 <th>Climbing</th>
+						 <td>{{context.Climbing.True}}</td>
+						 <td>{{context.Climbing.False}}</td>
+					 </tr>
+					 <tr>
+						 <th>Eating</th>
+						 <td>{{context.Eating.True}}</td>
+						 <td>{{context.Eating.False}}</td>
+					 </tr>
+					 <tr>
+						 <th>Foraging</th>
+						 <td>{{context.Foraging.True}}</td>
+						 <td>{{context.Foraging.False}}</td>
+					 </tr>
+				 </tbody>
+                         </table>
+                </div>
+		<br>
+		<br>
+</body>
+</html>

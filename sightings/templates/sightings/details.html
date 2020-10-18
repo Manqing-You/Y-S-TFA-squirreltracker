@@ -8,7 +8,10 @@
 		<title> {{ sightings.Unique_Squirrel_ID }}'s details </title>
 	</head>
 
+
 	<body>
+		<strong><h2>{{ sightings.Unique_Squirrel_ID }}'s details</h2></strong>
+		<br>
 		<ul>
 			<li>Latitude: {{ squirrel.Latitude }}</li>
 			<li>Longtitude: {{ squirrel.Longitude }}</li>
@@ -35,8 +38,9 @@
 			<li>Runs From: {{ squirrel.Runs_From }}</li>
 		</ul>
 <br>
-	        <a href="{% url 'sightings:update' Unique_Squirrel_ID=squirrel.Unique_Squirrel_ID%}">Update the squirrel information</a><br>
-		<a href="{% url 'sightings:list_all'%}"> Return to the squirrel list page</a>
+<h3><a href="{% url 'sightings:update' Unique_Squirrel_ID=squirrel.Unique_Squirrel_ID%}" class="badge badge-light">Update</a> Click here to update the squirrel information!</h3>
+	<br>
+	<h3><a href="{% url 'sightings:list_all'%}"> Return to the squirrel list page</a></h3>
 
 	</body>
 </html>

@@ -8,15 +8,17 @@
 		<style>body{padding-left:20px; padding-right:20px;}</style>
 		<p>
 		<br>
-		<p>Please fill out the information below:)</p>
+		<h4><strong>Please fill out the information below:)</strong></h4>
 		<hr>
 		<br>
                 <form method='POST'>
                         {% csrf_token %}
                         {{form.as_p}}
                         <br>
-			<p>Thanks for sharing!</p>
-                        <input type="submit" name="add">
+			<h5><strong>Thanks for sharing!<h5></strong>
+		<br>
+		<button type="submit" value="Submit">Add</button>
+              
                 </form>
 		<br>
         </body>

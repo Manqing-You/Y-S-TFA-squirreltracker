@@ -41,7 +41,7 @@ def create_squirrel(request):
         form = sightingsform(request.POST)
         if form.is_valid():
             form.save()
-            return render(request,'sightings/list_all.html',context)
+            return redirect(f'/sightings')
     else:
         form = sightingsform()
 

@@ -7,15 +7,15 @@
         <body>
 			<style>body{padding-left:20px; padding-right:20px;}</style>
                 
-                <p>Update the squirrel sightings information below:</p>
+			<h4><strong>Update the squirrel sightings information below:</strong></h4>
                 <hr>
                 <br>
                 <form method='POST'>
                         {% csrf_token %}
                         {{form.as_p}}
                         <br>
-                        <p>Thanks for info! ></p>
-                        <input type="submit" name="submit">
+                        <h5><strong>Thanks for sharing!<h5></strong>
+                        <button type="submit" value="Submit">Update</button>
                         <br>
                 </form>
                 <br>

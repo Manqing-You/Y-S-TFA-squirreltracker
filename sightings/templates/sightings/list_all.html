@@ -14,20 +14,26 @@
       body {
         padding-left: 10px; padding-right: 10px;
       }
+      h3 {color:blue;}
 </style>
 		
 		
 		<br>
+		<p>
+		<ul>
+		<h3><li><a href="add/" class="badge badge-light">Add</a> Click here to add a new squirrel sighting!</li></h3>
+
 		<div>
-                <table class="table">
-		<div class="alert alert-dark text-center" role="alert">
-			<h5><strong> Existing Squirrel Track Records </strong></h5>
+                <table class="table table-hover">
+		<div class="alert alert-dark text-center">
+			<h2><strong> Existing Squirrel Sightings Records </strong></h2>
 		</div>
-		<thead class = "thead-dark">
+		<thead class = "bg-light text-dark">
                                 <tr>
                                         <th scope = "col">Unique Squirrel ID</th>
                                         <th scope = "col">Date</th>
                                         <th scope = "col">Shift</th>
+					<th scope = "col">(Lat,Long)</th>
 					<th scope = "col">See the details</th>
 					<th scope = "col">>Update the info</th>
                                 </tr>
@@ -39,6 +45,7 @@
                                         <td>{{ sight.Unique_Squirrel_ID }}</td>
                                         <td>{{ sight.Date }}</td>
                                         <td>{{ sight.Shift }}</td>
+					<td>({{sight.Latitude}},{{sight.Longtitude}}</td>
 					<td><a href="{{sight.Unique_Squirrel_ID}}/details">Click to see details</a>
 					<td><a href="{{sight.Unique_Squirrel_ID}}/">Click to update the info</a>
                                 </tr>

@@ -1,4 +1,4 @@
-from squirrel.models import Squirrel
+from sightings.models import sightings
 
 from django.core.management.base import BaseCommand, CommandError
 from django.db import models
@@ -16,9 +16,9 @@ class Command(BaseCommand):
       path = options['path']
       out = open(path, 'a', newline='')
 
-      ob = Squirrel.objects.all()
+      ob = sightings.objects.all()
       lis = ob.values_list()
-      fields = Squirrel.getattrlist()
+      fields = sightings.getattrlist()
 
       csv_write = csv.writer(out, dialect='excel')
       csv_write.writerow(fields)

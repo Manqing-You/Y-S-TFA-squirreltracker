@@ -33,7 +33,7 @@ class sightings(models.Model):
     adult='adult'
     juvenile='juvenile'
     other='other'
-	Age_Choices=(
+    Age_Choices=(
             (adult,'adult'),
             (juvenile,'juvenile'),
             (other,'other'),
@@ -66,7 +66,7 @@ class sightings(models.Model):
             (above_ground,'above ground'),
             (other,'other'),
     )
-	Location=models.CharField(
+    Location=models.CharField(
             max_length=20,
             choices=Location_choices,
             blank=True,

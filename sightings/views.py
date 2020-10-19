@@ -52,7 +52,11 @@ def create_squirrel(request):
 def stats(request):
     # LAT and LONG Average
     Lat_aver = sightings.objects.aggregate(Latitude=Avg('Latitude'))
-    Long_aver= sightings.objects.aggregate(Longtitude=Avg('Longitude'))
+    Long_aver= sightings.objects.aggregate(Longitude=Avg('Longitude'))
+    biglat=sightings.objects.all().filter(Latitude__gte=40.78).count()
+    smalllat=sightings.objects.all().filter(Latitude__lt=40.78).count()
+    biglong=sightings.objects.all().filter(Longitude__gte=-73.97).count()
+    smalllong=sightings.objects.all().filter(Longitude__lt=-73.97).count()
     #return a dictionary
 
     # Time
@@ -90,6 +94,10 @@ def stats(request):
             'Allnumber':sightings.objects.all().count(),
 	    'Lat_aver':Lat_aver,
 	    'Long_aver':Long_aver,
+            'biglat':biglat,
+            'smalllat':smalllat,
+            'biglong':biglong,
+            'smalllong':smalllong,
             'Shift': {'AM': AM_num,'PM': PM_num},
             'Age': {'Juvenile': Juvenile_num, 'Adult': Adult_num},
             'Primary_Fur_Color': {'Black':Black_num, 'Gray':Gray_num, 'Cinnamon':Cinnamon_num},

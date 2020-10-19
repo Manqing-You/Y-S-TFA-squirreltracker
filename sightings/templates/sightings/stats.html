@@ -8,15 +8,16 @@
 <style>
       body {
         padding-left: 20px; padding-right: 20px;
-		h3 {color:blue;}
+	h3 {color:blue;}
+
       }
 </style>
 <br>
 		<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1602957279283&di=75f5ad6aa7686e5b514af7eb70d25218&imgtype=0&src=http%3A%2F%2Ffile02.16sucai.com%2Fd%2Ffile%2F2014%2F0419%2Fd9f4710e211cd8bce6b8ef361b805fd3.jpg" style="width:80px" class="rounded" alt="big boat" ></p>
-		<strong><h2>Statistics of Squirrel Sightings</h2></strong>
+		<strong><center><h2>Statistics of Squirrel Sightings</h2></center></strong>
 		<br>
 			 <div>
-                        <table class='table table-bordered' id="all_num" style="width: 1000px">
+				 <center><table class='table table-bordered' id="all_num" style="width: 1000px">
 				<div class="alert alert-success text-center" style="width: 1000px">
 					<h4><strong> Counts of Squirrel Sightings Records </strong></h4>
                 </div>
@@ -25,7 +26,6 @@
                                                  <th scope='col'></th>
                                                  <th scope='col'>Total Records</th>
                                                  <th scope='col'>Total Records(with duplicate ID removed)</th>
-						 <th scope='col'>Average Latitude/Longitude</th>
                                          </tr>
                                  </thead>
                                  <tbody>
@@ -33,15 +33,42 @@
                                                  <th>Total quantity</th>
                                                  <td>3023</td>
                                                  <td>3018</td>
-						 <td>({{context.Lat_aver}},{{context.Long_aver}})</td>
                                          </tr>
                                  </tbody>
-                         </table>
+					 </table></center>
                 </div>
 		<br>
+		<div>
+            <center><table class='table table-bordered' id="basic_table" style="width: 1000px">
+            <div class="alert alert-success text-center" style="width: 1000px">
+            <h4><strong> Counts of Latitude&Longtitude of Squirrel Sightings</strong></h4>
+            </div>
+            <thead class="thead-light">
+            </thead>
+            <tbody>
+			<tr>
+            		<th>Average Latitude</th>
+			<th>Average Longtitude</th>
+			<th>Num > average latitude</th>
+			<th>Num < average latitude</th>
+			<th>Num > average longitude</th>
+			<th>Num < average longitude</th>
+            </tr>     
+            <tr>
+            <th>{{context.Lat_aver}}</th>
+			<th>{{context.Long_aver}}</th>
+			<th>{{context.biglat}}</th>
+			<th>{{context.smalllat}}</th>
+			<th>{{context.biglong}}</th>
+			<th>{{context.smalllong}}</th>
+            </tr>
+            </tbody>
+            </table></center>
+			
+</div>          
 		<br>
                 <div>
-                        <table class='table table-bordered' id="basic_table" style="width: 1000px">
+			<center><table class='table table-bordered' id="basic_table" style="width: 1000px">
 				<div class="alert alert-success text-center" style="width: 1000px">
 					<h4><strong> Counts of Basic Features of Squirrel Sightings</strong></h4>
                 </div>
@@ -79,12 +106,12 @@
                                                  
                                          </tr>
                                  </tbody>
-                         </table>
+				</table></center>
                 </div>
 		<br>
 		<br>
                 <div>
-                         <table class="table table-bordered" id="behaviors" style="width: 1000px">
+			<center><table class="table table-bordered" id="behaviors" style="width: 1000px">
 				 <div class="alert alert-success text-center" style="width: 1000px">
                                         <h4><strong> Counts of Behaviors of Squirrel Sightings </strong></h4>
                  </div>
@@ -122,9 +149,10 @@
 						 <td>{{context.Foraging.False}}</td>
 					 </tr>
 				 </tbody>
-                         </table>
+				</table><center>
                 </div>
 		<br>
+		<h4><a href="{% url 'sightings:list_all'%}" class="badge badge-light">Return</a>Click here to return to the squirrel list page</a></h4>
 		<br>
 </body>
 </html>

@@ -7,10 +7,14 @@
 	<head>
 		<title> {{ sightings.Unique_Squirrel_ID }}'s details </title>
 	</head>
+<style type="text/css">
+ li {line-height:2}
+ h2 {color:blue
+</style>
 
 
 	<body>
-		<strong><h2>{{ sightings.Unique_Squirrel_ID }}'s details</h2></strong>
+		<strong><h2>{{ squirrel.Unique_Squirrel_ID}}'s details</strong></h2>
 		<br>
 		<ul>
 			<li>Latitude: {{ squirrel.Latitude }}</li>
@@ -38,10 +42,9 @@
 			<li>Runs From: {{ squirrel.Runs_From }}</li>
 		</ul>
 <br>
-<h3><a href="{% url 'sightings:update' Unique_Squirrel_ID=squirrel.Unique_Squirrel_ID%}" class="badge badge-light">Update</a> Click here to update the squirrel information!</h3>
-	<br>
-	<h3><a href="{% url 'sightings:list_all'%}"> Return to the squirrel list page</a></h3>
-
+<h4><a href="{% url 'sightings:update' Unique_Squirrel_ID=squirrel.Unique_Squirrel_ID%}" class="badge badge-light">Update</a> Click here to update the squirrel information!</h4>
+<h4><a href="{% url 'sightings:list_all'%}" class="badge badge-light">Return</a> Click here to return to the squirrel list page</h4>
+<br>
 	</body>
 </html>
 

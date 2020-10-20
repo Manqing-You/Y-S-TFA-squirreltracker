@@ -8,16 +8,15 @@ This project is to build an application to help our customer keep track of all t
 ##  Import and export data
   * The customer can easily import squirrel data into the application, edit squirrel data in the application, and export data in CSV format.
 ## Map
-  * The map displays the location of thee squirrel sightings on the OpenStreets map. (openstreets map改成超链接）
-## Data management and update 每趴附链接
+  * The map displays the location of thee squirrel sightings on the OpenStreets map.
+## Data management and update
   * We create a view that lists all squirrel sightings to view each sighting.
   * The customer can update a particular sighting and create a new sighting.
-  * We provide a view with general stats about the sightings.
+  * We provide a view with general stats about the sightings. The customer can check the information conveniently.
 # Designers
 ## Group Name and Section
   * Y&S, Section 001
 ## Group Members' UNI
   * ys3404
   * my2692
-# Links 
-  * 
+

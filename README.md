@@ -5,11 +5,11 @@ This project is to build an application to help our customer keep track of all t
 # Features 
 ##  Model
   * We build a model to help us import and export squirrel data. It is shown in models.py
-##  Import and export data
+##  Import and Export Data
   * The customer can easily import squirrel data into the application, edit squirrel data in the application, and export data in CSV format.
 ## Map
   * The map displays the location of the squirrel sightings on the OpenStreets map.
-## Data management and update
+## Data Management and Update
   * We create a view that lists all squirrel sightings to view each sighting.
   * The customer can update a particular sighting and create a new sighting.
   * We provide a view with general stats about the sightings. The customer can check the information conveniently.

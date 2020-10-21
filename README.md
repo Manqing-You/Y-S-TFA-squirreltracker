@@ -1,4 +1,4 @@
-# Y-S-TFA-squirreltracker
+# Y&S-TFA-squirreltracker
 ![](https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1799240122,1902034286&fm=26&gp=0.jpg)
 # Project Description
 This project is to build an application to help our customer keep track of all the known squirrels and plans to start with Central Park. We import the 2018 Central Park Squirrel Census data and allow customer's team to add, update, and view squirrel data directly and conveniently. 
